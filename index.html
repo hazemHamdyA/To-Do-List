@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylee.css" />
+    <title>TO-Do List</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <h1 class="title">What I have to do</h1>
+    <div class="all-tasks">
+      <h2 class="mylist-title">My List</h2>
+      <ul class="task-list" data-lists></ul>
+      <form action="" data-form>
+        <input
+          type="text"
+          class="new list"
+          data-form-input
+          placeholder="new list name"
+          aria-label="new list name "
+        />
+        <button class="btn create" aria-label="create new list">+</button>
+      </form>
+    </div>
+    <div class="todo-list" data-todo-list>
+      <div class="todo-header">
+        <h2 class="list-title" data-todo-titile>Udmey</h2>
+        <p class="task-counnt" data-count>3 tasks remining</p>
+      </div>
+      <div class="todo-body">
+        <div class="tasks" data-tasks></div>
+        <div class="new-task-creator">
+          <form action="" data-task-form>
+            <input
+              type="text"
+              data-task-input
+              class="new list"
+              placeholder="new task name"
+              aria-label="new task name "
+            />
+            <button
+              class="btn create task newCreate"
+              aria-label="create new task"
+            >
+              +
+            </button>
+          </form>
+        </div>
+        <div class="delete-staff">
+          <button class="btn delete" data-delete-complete-tasks="">
+            clear completed task
+          </button>
+          <button class="btn delete" data-delete-btn>delete task</button>
+        </div>
+      </div>
+    </div>
+
+    <template id="task-templata">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
+  </body>
+</html>
